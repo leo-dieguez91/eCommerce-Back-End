@@ -76,4 +76,17 @@ _La documentación de la API está disponible en:_
 ```
     Swagger UI: http://localhost/api/documentation
 ```
-[![Download Postman Collection](https://img.shields.io/badge/Download-Postman_Collection-blue)](https://github.com/leo-dieguez91/eCommerce-Back-End/raw/main/postman/eCommerce.postman_collection.json)
+
+**Pruebas con Postman**
+
+Para probar la API, puedes descargar la colección de Postman:
+
+**_Collection:_**
+
+[![Download Postman Collection](https://run.pstmn.io/button.svg)](https://github.com/leo-dieguez91/eCommerce-Back-End/raw/main/postman/eCommerce.postman_collection.json)
+- Descarga la colección haciendo clic en el botón anterior.
+
+**_Environment:_**
+
+[![Config Enviroment LocalHost](https://img.shields.io/badge/Probar_en-Postman-orange)](https://github.com/leo-dieguez91/eCommerce-Back-End/raw/main/postman/localhost.postman_environment.json)
+- Configura el entorno Local de Postman con el archivo descargado.
