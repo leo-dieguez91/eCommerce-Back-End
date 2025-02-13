@@ -16,6 +16,15 @@ class OrderProduct extends Model
         'price',
     ];
 
+    protected $casts = [
+        'order_id' => 'integer',
+        'product_id' => 'integer',
+        'quantity' => 'integer',
+        'price' => 'decimal:2',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
+    ];
+
     public function order()
     {
         return $this->belongsTo(Order::class);

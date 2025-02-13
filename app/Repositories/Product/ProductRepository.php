@@ -20,7 +20,7 @@ class ProductRepository
 
     public function findById($id)
     {
-        return Product::findOrFail($id);
+        return $this->product->findOrFail($id);
     }
 
     public function create(array $data)
@@ -30,8 +30,7 @@ class ProductRepository
 
     public function update($product, array $data)
     {
-        $product->update($data);
-        return $product->fresh();
+        return $product->update($data);
     }
 
     public function delete(Product $product)

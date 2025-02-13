@@ -22,14 +22,4 @@ class ProductDTO
             return !is_null($value);
         });
     }
-
-    public static function fromRequest($request): self
-    {
-        return new self(
-            name: $request->input('name'),
-            description: $request->input('description'),
-            price: $request->input('price'),
-            stock: $request->input('stock'),
-        );
-    }
 } 

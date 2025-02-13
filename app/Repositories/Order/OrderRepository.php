@@ -40,6 +40,6 @@ class OrderRepository
 
     public function findByTracking($trackingNumber)
     {
-        return Order::where('tracking_number', $trackingNumber)->firstOrFail();
+        return $this->order->where('tracking_number', $trackingNumber)->firstOrFail();
     }
 } 

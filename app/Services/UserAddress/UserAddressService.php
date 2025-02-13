@@ -67,7 +67,6 @@ class UserAddressService
             ]
         );
 
-        // Limpiar cache después de crear/actualizar
         $this->clearCache(self::CACHE_KEY);
         $this->clearCache(self::CACHE_KEY, $result->id);
 
@@ -84,7 +83,6 @@ class UserAddressService
 
         $address->delete();
 
-        // Limpiar cache después de eliminar
         $this->clearCache(self::CACHE_KEY);
         $this->clearCache(self::CACHE_KEY, $id);
     }

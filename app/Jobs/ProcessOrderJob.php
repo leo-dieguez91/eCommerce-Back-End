@@ -60,10 +60,8 @@ class ProcessOrderJob implements ShouldQueue
 
             DB::commit();
             
-            // Enviar notificación después del commit
             $this->order->user->notify(new OrderCreatedNotification($this->order));
 
-            // Limpiar cache después de cada cambio de estado
             $this->clearCache(self::CACHE_KEY);
             $this->clearCache(self::CACHE_KEY, $this->order->id);
             $this->clearCache(self::CACHE_KEY, "tracking_{$this->order->tracking_number}");
