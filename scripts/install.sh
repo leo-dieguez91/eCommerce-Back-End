@@ -23,7 +23,11 @@ echo "🐳 Iniciando contenedores Docker..."
 
 # Esperar a que MySQL esté listo
 echo "⏳ Esperando a que MySQL esté listo..."
-sleep 15  # Aumentamos el tiempo de espera
+sleep 15  # Primero esperamos
+
+# Intentar crear la base de datos con reintentos
+echo "🗄️ Creando base de datos si no existe..."
+docker exec $(docker ps -qf "name=mysql") mysql -u root -ppassword -e "CREATE DATABASE IF NOT EXISTS laravel;"
 
 # Generar clave de aplicación
 echo "🔑 Generando clave de aplicación..."
