@@ -38,6 +38,7 @@ Ejecuta el script de instalación:
 * Ejecutar las migraciones y seeders.
 * Configurar Passport para la autenticación.
 
+--------
 **Servicios Disponibles:**
 
 _Una vez instalado, tendrás acceso a los siguientes servicios:_
@@ -50,6 +51,16 @@ _Una vez instalado, tendrás acceso a los siguientes servicios:_
 
 * Mailpit: http://localhost:8025 (Interfaz para ver correos enviados)
 
+------
+**Acceso de Administrador:**
+
+_Para acceder como administrador y gestionar los productos, utiliza las siguientes credenciales:_
+
+**Email**: admin@admin.com
+
+**Contraseña**: admin
+
+--------
 **Comandos Útiles:**
 
 _Aquí tienes algunos comandos útiles para manejar el proyecto:_
@@ -70,13 +81,14 @@ Acceder a la base de datos:
 ```
     ./vendor/bin/sail mysql
 ```
+------
 **Documentación:**
 
 _La documentación de la API está disponible en:_
 ```
     Swagger UI: http://localhost/api/documentation
 ```
-
+--------
 **Pruebas con Postman**
 
 Para probar la API, puedes descargar la colección de Postman:
