@@ -48,7 +48,14 @@ class PostProductController extends Controller
 
     public function __invoke(StoreProductRequest $request)
     {
-        $productDTO = new ProductDTO($request->validated());
+        $validatedData = $request->validated();
+        
+        $productDTO = new ProductDTO(
+            name: $validatedData['name'],
+            description: $validatedData['description'],
+            price: $validatedData['price'],
+            stock: $validatedData['stock']
+        );
         $product = $this->productService->createProduct($productDTO);
         return new ProductResource($product);
     }

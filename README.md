@@ -76,3 +76,4 @@ _La documentación de la API está disponible en:_
 ```
     Swagger UI: http://localhost/api/documentation
 ```
+[![Download Postman Collection](https://img.shields.io/badge/Download-Postman_Collection-blue)](https://github.com/leo-dieguez91/eCommerce-Back-End/raw/main/postman/eCommerce.postman_collection.json)

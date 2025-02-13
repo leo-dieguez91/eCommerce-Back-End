@@ -5,7 +5,7 @@ namespace App\DTOs\Product;
 class ProductDTO
 {
     public function __construct(
-        public readonly ?string $name = null,
+        public readonly ?string $name,
         public readonly ?string $description = null,
         public readonly ?float $price = null,
         public readonly ?int $stock = null,

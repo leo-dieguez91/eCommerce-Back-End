@@ -8,7 +8,6 @@ class UserAddressResource extends JsonResource
 {
     public function toArray($request)
     {
-        // Si es una colección, retornamos el array directamente
         if (is_null($this->resource)) {
             return [];
         }
@@ -16,7 +15,8 @@ class UserAddressResource extends JsonResource
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'address' => $this->address,
+            'type' => $this->type,
+            'street' => $this->street,
             'city' => $this->city,
             'state' => $this->state,
             'zip_code' => $this->zip_code,

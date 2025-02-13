@@ -22,7 +22,7 @@ class UserAddressControllerTest extends TestCase
     public function test_can_create_user_address()
     {
         $addressData = [
-            'street' => '123 Main St',
+            'street' => 'Calle de prueba',
             'city' => 'Test City',
             'state' => 'Test State',
             'zip_code' => '12345',
@@ -40,7 +40,8 @@ class UserAddressControllerTest extends TestCase
                 'data' => [
                     'id',
                     'user_id',
-                    'address',
+                    'type',
+                    'street',
                     'city',
                     'state',
                     'zip_code',
@@ -67,7 +68,8 @@ class UserAddressControllerTest extends TestCase
                     '*' => [
                         'id',
                         'user_id',
-                        'address',
+                        'type',
+                        'street',
                         'city',
                         'state',
                         'zip_code',
@@ -94,7 +96,8 @@ class UserAddressControllerTest extends TestCase
                 'data' => [
                     'id',
                     'user_id',
-                    'address',
+                    'type',
+                    'street',
                     'city',
                     'state',
                     'zip_code',
