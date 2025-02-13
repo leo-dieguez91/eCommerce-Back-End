@@ -31,7 +31,7 @@ echo "🔑 Generando clave de aplicación..."
 
 # Ejecutar migraciones y seeders
 echo "🔄 Ejecutando migraciones..."
-./vendor/bin/sail artisan migrate
+./vendor/bin/sail artisan migrate:fresh
 echo "🌱 Ejecutando seeders..."
 ./vendor/bin/sail artisan db:seed
 
@@ -39,9 +39,13 @@ echo "🚀 Iniciando instalación de Passport..."
 
 # Mostrar animación de instalación
 echo -n "⏳ Installing Passport"
-for i in {1..5}; do
+for i in {1..6}; do
     echo -n "."
     sleep 0.5
+    if [ $i -eq 6 ]; then
+        echo " Presiona Enter para continuar..."
+        read
+    fi
 done
 echo ""
 
@@ -60,7 +64,7 @@ for i in {1..5}; do
     echo -n "."
     sleep 0.5
 done
-echo ""
+echo "Presiona Enter para continuar..."
 
 sed -i '' "s/PASSPORT_PERSONAL_ACCESS_CLIENT_ID=.*/PASSPORT_PERSONAL_ACCESS_CLIENT_ID=$PERSONAL_CLIENT_ID/" .env
 sed -i '' "s/PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=.*/PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=$PERSONAL_CLIENT_SECRET/" .env
